@@ -5,14 +5,14 @@ import Publications from "../../components/Publications";
 import Services from "../../components/Services";
 import Story from "../../components/Story";
 import Testimonials from "../../components/Testimonials";
+
 import { context } from "../../context/context";
 import TrueManLayout from "../../layout/TrueManLayout";
 import { useContext, useEffect } from "react";
 const Index = () => {
-  const { banner_image_function, banner_type_function } = useContext(context);
+  const { banner_type_function } = useContext(context);
   useEffect(() => {
-    banner_image_function("/img/banner2.jpg");
-    banner_type_function("image");
+    banner_type_function("slider");
   }, []);
   return (
     <TrueManLayout>
@@ -22,7 +22,7 @@ const Index = () => {
       {/* text */}
       <Story />
       {/* text end */}
-     
+      
       {/* video resume end */}
       {/* services */}
       <Services />
